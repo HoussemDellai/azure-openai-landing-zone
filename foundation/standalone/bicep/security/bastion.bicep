@@ -60,7 +60,7 @@ resource nicJumpbox 'Microsoft.Network/networkInterfaces@2021-02-01' = {
 }
 
 resource vmJumpbox 'Microsoft.Compute/virtualMachines@2024-07-01' = {
-  name: 'vm-jumpbox-win11'
+  name: 'vm-jumpbox-w11'
   location: location
   identity: {
     type: 'SystemAssigned'

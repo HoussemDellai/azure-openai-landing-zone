@@ -17,8 +17,8 @@ choco install python -y
 # Install Azure Functions Core Tools
 choco install azure-functions-core-tools -y
 
-# install Powershell Core
-choco install powershell-core -y
+# # install Powershell Core
+# choco install powershell-core -y
 
 # Install Node.js
 choco install nodejs -y
@@ -28,4 +28,8 @@ choco install nodejs -y
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 refreshenv
 npm install -g @azure/static-web-apps-cli
-# Start-Process powershell.exe -ArgumentList "-NoExit -Command & 'npm install -g @azure/static-web-apps-cli'"
+
+cd Desktop
+git clone https://github.com/Azure/azure-openai-landing-zone
+cd azure-openai-landing-zone
+# # Start-Process powershell.exe -ArgumentList "-NoExit -Command & 'npm install -g @azure/static-web-apps-cli'"
