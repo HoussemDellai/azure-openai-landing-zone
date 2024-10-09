@@ -23,6 +23,17 @@ choco install azure-functions-core-tools -y
 # Install Node.js
 choco install nodejs -y
 
+# Create file in Desktop
+New-Item -Path $env:USERPROFILE\Desktop\install-tools-windows.ps1 -ItemType file -Force
+
+@"
+npm install -g @azure/static-web-apps-cli
+
+cd Desktop
+git clone https://github.com/Azure/azure-openai-landing-zone
+cd azure-openai-landing-zone
+"@ > $env:USERPROFILE\Desktop\configure.txt
+
 # Not working, needs to restart Powershell 
 # # Use npm (from Node.js) to install the Static Web Apps CLI globally
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
